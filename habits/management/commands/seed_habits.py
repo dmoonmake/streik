@@ -3,7 +3,11 @@ from habits.models import Habit, Completion
 from datetime import datetime
 
 class Command(BaseCommand):
-  help = "Seed habits with predefined completions and streaks from spreadsheet data."
+  """
+  Command to seed the database with predefined habits and completions.
+  This command is intended for development and testing purposes only.
+  It should not be used in production.
+  """
 
   def handle(self, *args, **kwargs):
     self.stdout.write(self.style.NOTICE("Resetting habits and completions..."))
